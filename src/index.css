@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background: #07090d;
+}
+
+body {
+  font-family: Outfit, "Segoe UI", system-ui, sans-serif;
+  overflow: hidden;
+}
+
+* { box-sizing: border-box; }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: #2c3444; border-radius: 99px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+.desk-window {
+  background:
+    radial-gradient(1200px 500px at 10% -10%, rgba(201, 164, 74, 0.08), transparent 50%),
+    radial-gradient(900px 400px at 100% 0%, rgba(80, 120, 200, 0.08), transparent 46%),
+    #0c0f15;
+}
+
+.nav-btn.active {
+  background: linear-gradient(90deg, rgba(201, 164, 74, 0.18), rgba(201, 164, 74, 0.04));
+  color: #f4efe2;
+  box-shadow: inset 2px 0 0 #c9a44a;
+}
+
+.thumb {
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,0.28), transparent 40%),
+    linear-gradient(160deg, hsl(var(--h) 42% 42%), hsl(calc(var(--h) + 30) 35% 18%));
+}
+
+.stage {
+  background:
+    radial-gradient(circle at 50% 20%, rgba(255,255,255,0.08), transparent 36%),
+    linear-gradient(180deg, #1a140c 0%, #0b0d12 70%);
+}
+
+.stage.cross {
+  background:
+    radial-gradient(circle at 50% 42%, rgba(232, 196, 110, 0.22), transparent 28%),
+    linear-gradient(180deg, #2a2114, #0c0e13 72%);
+}
+.stage.sanctuary {
+  background:
+    radial-gradient(circle at 50% 30%, rgba(120, 170, 255, 0.2), transparent 34%),
+    linear-gradient(180deg, #172033, #0b0e14 75%);
+}
+.stage.harvest {
+  background:
+    radial-gradient(circle at 60% 30%, rgba(224, 122, 61, 0.28), transparent 32%),
+    linear-gradient(180deg, #3a2416, #100d0b 75%);
+}
+.stage.dawn {
+  background:
+    radial-gradient(circle at 50% 80%, rgba(242, 215, 162, 0.3), transparent 40%),
+    linear-gradient(180deg, #3a2a22, #14110f 80%);
+}
+
+.tooltip {
+  position: relative;
+}
+.tooltip:hover::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #11151d;
+  color: #f3f5f8;
+  border: 1px solid #2c3444;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  padding: 5px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  z-index: 40;
+  pointer-events: none;
+}
+
+input[type="range"] {
+  accent-color: #c9a44a;
+}
